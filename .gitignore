@@ -1,0 +1,8 @@
+# Ignore VS Code configuration directory
+.vscode
+
+# Ignore WIP checker library
+/include/libgu/checker
+
+# Ignore build directory
+/build

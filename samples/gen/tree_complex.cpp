@@ -12,7 +12,7 @@ class TreeFormatter {
 public:
   static String format_edge(const Edge<Weight>& e) {
     auto [le, re, w] = e;
-    std::stringstream ss;
+    std::ostringstream ss;
     ss << le << " --(" << std::fixed << w.b << ", " << w.a << ")--> " << re;
     return ss.str();
   }

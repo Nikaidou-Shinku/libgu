@@ -18,7 +18,7 @@ class Weighted {
 public:
   static String format_edge(const Edge<_Weight>& e) {
     auto [le, re, w] = e;
-    std::stringstream ss;
+    std::ostringstream ss;
     ss << le << ' ' << re << ' ' << w;
     return ss.str();
   }
@@ -29,7 +29,7 @@ class Unweighted {
 public:
   static String format_edge(const Edge<_Weight>& e) {
     auto [le, re, _w] = e;
-    std::stringstream ss;
+    std::ostringstream ss;
     ss << le << ' ' << re;
     return ss.str();
   }
@@ -96,7 +96,7 @@ public:
     // TODO: shuffle here
     // shuffle_func(edges_str);
 
-    std::stringstream ss;
+    std::ostringstream ss;
     ss << _size << ' ' << (_size - 1) << '\n';
     for (const auto& item : edge_list)
       ss << F::format_edge(item) << '\n';

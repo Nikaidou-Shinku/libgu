@@ -10,6 +10,12 @@ using f64 = double;
 using String = std::string;
 
 template<typename T>
+concept FromStr =
+  requires(std::istream& in, T t) {
+    in >> t;
+  };
+
+template<typename T>
 concept Display =
   requires(std::ostream& out, T t) {
     out << t;

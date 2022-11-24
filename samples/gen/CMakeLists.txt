@@ -6,3 +6,6 @@ target_link_libraries(tree PRIVATE libgu)
 
 add_executable(tree_complex tree_complex.cpp)
 target_link_libraries(tree_complex PRIVATE libgu)
+
+add_executable(args args.cpp)
+target_link_libraries(args PRIVATE libgu)
